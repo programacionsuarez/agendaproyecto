@@ -11,7 +11,7 @@ public class Reunion {
     private LocalTime hora;
     private Collection<Contacto> contactos;
 
-    // Metodos principales
+    // Metodos principales juan
     // Constructor
     public Reunion(String descripcion, LocalDate fecha, LocalTime hora) {
         //set para verificar que el usuario introduzca los datos correspodientes
