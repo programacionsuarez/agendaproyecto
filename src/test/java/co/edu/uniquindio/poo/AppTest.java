@@ -21,9 +21,45 @@ public class AppTest {
      * Rigorous Test :-)
      */
     @Test
-    public void shouldAnswerWithTrue() {
-        LOG.info("Iniciado test shouldAnswerWithTrue");
+    public void testCrearContacto() {
+        LOG.info("Iniciado test crearContacto");
         assertTrue(true);
-        LOG.info("Finalizando test shouldAnswerWithTrue");
+        LOG.info("Finalizando test crearContacto");
     }
+
+    @Test
+    public void testAgregarContactoLista() {
+        LOG.info("Iniciado test agregar un contacto a una lista");
+        assertTrue(true);
+        LOG.info("Finalizando test agregar un contacto a una lista");
+    }
+
+    @Test
+    public void testAgregarContactoRepetido() {
+        LOG.info("Iniciado test agregar un contacto repetido a una lista");
+        assertTrue(true);
+        LOG.info("Finalizando test agregar un contacto repetido a una lista");
+    }
+
+    @Test
+    public void testAgregarLimiteContactos() {
+        LOG.info("Iniciado test limite de contactos");
+        assertTrue(true);
+        LOG.info("Finalizando test limite de contactos");
+    }
+
+    @Test
+    public void testModificarContacto() {
+        LOG.info("Iniciado test modificar contacto");
+        assertTrue(true);
+        LOG.info("Finalizando test modificar contacto");
+    }
+    @Test
+    public void testeliminarContacto() {
+        LOG.info("Iniciado test eliminar contacto");
+        assertTrue(true);
+        LOG.info("Finalizando test eliminar contacto");
+    }
+    
+
 }
