@@ -1,26 +1,35 @@
 package co.edu.uniquindio.poo;
 
-public class Contacto{
+public class Contacto {
     private String nombre;
     private String alias;
     private String direccion;
     private String telefono;
     private String email;
 
+    // Metodos principales
+    // Metodo Constructor
     public Contacto(String nombre, String alias, String direccion, String telefono, String email) {
-        this.nombre = nombre;
-        this.alias = alias;
-        this.direccion = direccion;
-        this.telefono = telefono;
-        this.email = email;
+        //Los set verifican que el usuario ingrese los datos que corresponden 
+        setNombre(nombre);
+        setAlias(alias);
+        setDireccion(direccion);
+        setTelefono(telefono);
+        setEmail(email);
     }
 
+    // Metodos get, set, toString
     public String getNombre() {
         return nombre;
     }
 
     public void setNombre(String nombre) {
-        this.nombre = nombre;
+        if (nombre != null && !nombre.isBlank() && nombre.matches("[a-zA-Z\\s]+")) {
+            this.nombre = nombre;
+        } else {
+            throw new IllegalArgumentException("El nombre solo puede contener letras y espacios.");
+        }
+        
     }
 
     public String getAlias() {
@@ -28,7 +37,12 @@ public class Contacto{
     }
 
     public void setAlias(String alias) {
-        this.alias = alias;
+        if (alias != null && !alias.isBlank() && alias.matches("[a-zA-Z0-9]+")) {
+            this.alias = alias;
+        } else {
+            throw new IllegalArgumentException("El alias solo puede contener letras y números.");
+        }
+        
     }
 
     public String getDireccion() {
@@ -36,7 +50,9 @@ public class Contacto{
     }
 
     public void setDireccion(String direccion) {
-        this.direccion = direccion;
+          assert direccion != null && !direccion.isBlank(): "La dirección no puede ser nula o vacia";
+          this.direccion = direccion;
+        
     }
 
     public String getTelefono() {
@@ -44,7 +60,11 @@ public class Contacto{
     }
 
     public void setTelefono(String telefono) {
-        this.telefono = telefono;
+        if (telefono != null && !telefono.isBlank() && telefono.matches("[0-9]+")) {
+            this.telefono = telefono;
+        } else {
+            throw new IllegalArgumentException("El teléfono solo puede contener números.");
+        }
     }
 
     public String getEmail() {
@@ -52,7 +72,9 @@ public class Contacto{
     }
 
     public void setEmail(String email) {
+        assert email != null && !email.isBlank(): "El email no puede ser nulo o vacio";
         this.email = email;
+        
     }
 
     @Override
@@ -60,9 +82,5 @@ public class Contacto{
         return "Contacto: nombre" + nombre + ", alias " + alias + ", direccion " + direccion + ", telefono " + telefono
                 + ", email " + email + ".";
     }
-
-    
-
-    
 
 }
